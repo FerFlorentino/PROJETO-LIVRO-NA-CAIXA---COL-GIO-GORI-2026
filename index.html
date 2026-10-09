@@ -1,149 +1,264 @@
-
 <!DOCTYPE html>
+
 <html lang="pt-br">
 
 <head>
-    
-<!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Projeto Livro na Caixa</title>
 
     <style>
+
         body {
+
             font-family: Arial, sans-serif;
+
             background-color: #f5f5f5;
+
             margin: 0;
+
             padding: 0;
+
         }
 
         #sobre p {
+
             font-family: Georgia, "Times New Roman", serif;
+
             font-size: 19px;
+
             line-height: 1.9;
+
             color: #333333;
+
             text-align: justify;
+
             letter-spacing: 0.3px;
+
         }
 
-
         /* CABEÇALHO AZUL */
+
         header {
+
             background-color: #24558a;
+
             color: white;
+
             text-align: center;
+
             padding: 35px 20px;
+
         }
 
         /* BANNER DO PROJETO */
+
         .banner-projeto {
+
             display: block;
+
             width: 100%;
+
             max-width: 500px;
+
             height: auto;
+
             margin: 0 auto 20px;
+
             border-radius: 12px;
+
         }
 
         header h1 {
+
             font-size: 36px;
+
             margin: 15px 0;
+
         }
 
         header p {
+
             font-size: 18px;
+
             margin: 10px 0;
+
         }
 
         /* MENU */
+
         nav {
+
             background-color: #f5ca55;
+
             text-align: center;
+
             padding: 15px;
+
         }
 
         nav a {
+
             display: inline-block;
+
             margin: 5px 10px;
+
             color: #173b75;
+
             text-decoration: none;
+
             font-weight: bold;
+
         }
 
         /* SEÇÕES */
+
         section {
+
             background-color: white;
+
             max-width: 1000px;
+
             margin: 25px auto;
+
             padding: 25px;
+
             border-radius: 12px;
+
         }
 
         h2 {
+
             color: #24558a;
+
             text-align: center;
+
         }
 
         p {
+
             line-height: 1.7;
+
         }
 
         /* GALERIA */
+
         .galeria {
+
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 15px;
+
         }
 
         .galeria img {
+
             width: 100%;
+
             height: 220px;
+
             object-fit: cover;
+
             border-radius: 10px;
+
         }
 
         /* RODAPÉ */
+
         footer {
+
             background-color: #24558a;
+
             color: white;
+
             text-align: center;
+
             padding: 20px;
+
         }
 
         /* CELULARES */
+
         @media (max-width: 700px) {
+
             section {
+
                 margin: 15px;
+
             }
 
             header h1 {
+
                 font-size: 28px;
+
             }
 
             .galeria {
+
                 grid-template-columns: repeat(2, 1fr);
+
             }
+
         }
 
         @media (max-width: 450px) {
+
             .galeria {
+
                 grid-template-columns: 1fr;
+
             }
+
         }
+
+    
+        /* FOTOS AMPLIADAS */
+        .galeria img { cursor: zoom-in; transition: transform 0.2s; }
+        .galeria img:hover { transform: scale(1.02); }
+        .visualizador {
+            display: none; position: fixed; inset: 0; z-index: 1000;
+            background: rgba(0,0,0,0.93); align-items: center;
+            justify-content: center; padding: 55px 55px;
+            box-sizing: border-box;
+        }
+        .visualizador.aberto { display: flex; }
+        .visualizador img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 5px; }
+        .visualizador button {
+            position: absolute; background: rgba(255,255,255,0.15);
+            border: none; color: white; cursor: pointer; border-radius: 8px;
+            font-size: 30px; padding: 8px 14px;
+        }
+        .visualizador button:hover { background: rgba(255,255,255,0.3); }
+        .fechar-foto { top: 12px; right: 16px; }
+        .foto-anterior { left: 8px; top: 50%; transform: translateY(-50%); }
+        .foto-proxima { right: 8px; top: 50%; transform: translateY(-50%); }
+        @media (max-width: 600px) {
+            .visualizador { padding: 65px 40px; }
+            .visualizador button { font-size: 24px; padding: 7px 10px; }
+        }
+        .galeria-videos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .galeria-videos video { width: 100%; border-radius: 12px; background: black; }
+        @media (max-width: 700px) { .galeria-videos { grid-template-columns: 1fr; } }
+
     </style>
+
 </head>
 
 <body>
 
     <!-- CABEÇALHO -->
+
     <header>
 
         <img src="imagem39.jpeg"
+
              alt="Banner do Projeto Livro na Caixa"
+
              class="banner-projeto">
 
         <h1>📚 Projeto Livro na Caixa 📦</h1>
@@ -153,229 +268,347 @@
         <p>Colégio Estadual José Luiz Gori</p>
 
     </header>
-   
+
 <!-- MENU -->
+
 <nav>
+
     <a href="#sobre">Sobre</a>
+
     <a href="#fotos">Fotografias</a>
+
     <a href="#professoras">Professoras</a>
+
     <a href="#bastidores">Bastidores</a>
+
 </nav>
 
-
     <!-- SOBRE O PROJETO -->
+
     <section id="sobre">
 
         <h2>Sobre o Projeto</h2>
 
         <p>
+
             O projeto Livro na Caixa foi idealizado
+
             pelas professoras <b>Fernanda Florentino e
+
             Andréa Reis</b>, com os alunos dos 6º anos
+
             do <b>Colégio Estadual José Luiz Gori</b>,
+
             em Mandaguari, Paraná.
+
         </p>
 
         <p>
+
             O objetivo foi incentivar a leitura,
+
             a interpretação e a criatividade.
+
             Após a leitura dos livros, os estudantes
+
             construíram maquetes para representar
+
             personagens, cenários e acontecimentos
+
             das histórias.
+
         </p>
 
         <p>
+
             A exposição aconteceu no dia
+
             8 de outubro de 2026 e contou com
+
             a participação da comunidade escolar.
+
         </p>
 
     </section>
 
-   
     <!-- GALERIA DE FOTOGRAFIAS -->
+
     <section id="fotos">
 
         <h2>📸 Galeria de Fotografias</h2>
 
         <p>
+
             Confira alguns momentos especiais
+
             do nosso projeto!
+
         </p>
 
         <div class="galeria">
 
-            
-
 <img src="imagens/imagem01.jpeg" alt="Foto 1">
+
 <img src="imagens/imagem02.jpeg" alt="Foto 2">
+
 <img src="imagens/imagem03.jpeg" alt="Foto 3">
+
 <img src="imagens/imagem04.jpeg" alt="Foto 4">
+
 <img src="imagens/imagem05.jpeg" alt="Foto 5">
+
 <img src="imagens/imagem06.jpeg" alt="Foto 6">
+
 <img src="imagens/imagem07.jpeg" alt="Foto 7">
+
 <img src="imagens/imagem08.jpeg" alt="Foto 8">
+
 <img src="imagens/imagem09.jpeg" alt="Foto 9">
+
 <img src="imagens/imagem10.jpeg" alt="Foto 10">
+
 <img src="imagens/imagem11.jpeg" alt="Foto 11">
+
 <img src="imagens/imagem12.jpeg" alt="Foto 12">
+
 <img src="imagens/imagem13.jpeg" alt="Foto 13">
+
 <img src="imagens/imagem14.jpeg" alt="Foto 14">
+
 <img src="imagens/imagem15.jpeg" alt="Foto 15">
+
 <img src="imagens/imagem16.jpeg" alt="Foto 16">
+
 <img src="imagens/imagem17.jpeg" alt="Foto 17">
+
 <img src="imagens/imagem18.jpeg" alt="Foto 18">
+
 <img src="imagens/imagem19.jpeg" alt="Foto 19">
+
 <img src="imagens/imagem20.jpeg" alt="Foto 20">
+
 <img src="imagens/imagem21.jpeg" alt="Foto 21">
+
 <img src="imagens/imagem22.jpeg" alt="Foto 22">
+
 <img src="imagens/imagem23.jpeg" alt="Foto 23">
+
 <img src="imagens/imagem24.jpeg" alt="Foto 24">
+
 <img src="imagens/imagem25.jpeg" alt="Foto 25">
+
 <img src="imagens/imagem26.jpeg" alt="Foto 26">
+
 <img src="imagens/imagem27.jpeg" alt="Foto 27">
+
 <img src="imagens/imagem28.jpeg" alt="Foto 28">
+
 <img src="imagens/imagem29.jpeg" alt="Foto 29">
+
 <img src="imagens/imagem30.jpeg" alt="Foto 30">
+
 <img src="imagens/imagem31.jpeg" alt="Foto 31">
+
 <img src="imagens/imagem32.jpeg" alt="Foto 32">
+
 <img src="imagens/imagem33.jpeg" alt="Foto 33">
+
 <img src="imagens/imagem34.jpeg" alt="Foto 34">
+
 <img src="imagens/imagem35.jpeg" alt="Foto 35">
+
 <img src="imagens/imagem36.jpeg" alt="Foto 36">
+
 <img src="imagens/imagem37.jpeg" alt="Foto 37">
+
 <img src="imagens/imagem38.jpeg" alt="Foto 38">
-
-
 
         </div>
 
     </section>
 
-    
-
 <!-- VÍDEOS DO PROJETO -->
+
 <section id="videos">
+
     <h2>🎥 Vídeos do Nosso Projeto</h2>
 
     <p>
+
         Confira os momentos especiais do
+
         Projeto Livro na Caixa!
+
     </p>
 
     <div class="galeria-videos">
 
         <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.50.30.mp4" type="video/mp4">
+
         </video>
 
         <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.50.32.mp4" type="video/mp4">
+
         </video>
 
         <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.50.34.mp4" type="video/mp4">
+
         </video>
 
         <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.50.36.mp4" type="video/mp4">
+
         </video>
 
         <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.50.39.mp4" type="video/mp4">
+
         </video>
 
         <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.50.47.mp4" type="video/mp4">
+
         </video>
 
         <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.50.56.mp4" type="video/mp4">
+
         </video>
 
         <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.51.00 (1).mp4" type="video/mp4">
+
         </video>
 
         <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.51.00.mp4" type="video/mp4">
+
         </video>
 
         <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.51.05.mp4" type="video/mp4">
+
         </video>
 
         <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.51.07.mp4" type="video/mp4">
+
         </video>
 
                 <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.51.15.mp4" type="video/mp4">
+
         </video>
 
         <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.51.17 (1).mp4" type="video/mp4">
+
         </video>
 
         <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.51.17.mp4" type="video/mp4">
+
         </video>
 
         <video controls preload="metadata">
+
             <source src="videos/WhatsApp Video 2026-10-09 at 15.51.18.mp4" type="video/mp4">
+
         </video>
 
     </div>
 
 </section>
 
-      
 <!-- BASTIDORES DO PROJETO -->
+
 <section id="bastidores">
 
     <h2>🎨 Bastidores do Projeto: Mãos à Obra!</h2>
 
     <p>
+
         Antes de cada maquete pronta, houve muita
+
         dedicação, criatividade e trabalho em equipe!
+
         Nossos alunos transformaram as histórias
+
         dos livros em cenários, personagens e
+
         produções cheias de significado.
+
     </p>
 
     <p>
+
         Confira alguns momentos da construção
+
         das maquetes do Projeto Livro na Caixa!
+
     </p>
 
     <div class="galeria">
 
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.17 (1).jpeg" alt="Bastidores 1" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.17.jpeg" alt="Bastidores 2" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.18 (1).jpeg" alt="Bastidores 3" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.18 (2).jpeg" alt="Bastidores 4" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.18 (3).jpeg" alt="Bastidores 5" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.18.jpeg" alt="Bastidores 6" loading="lazy">
 
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.19 (1).jpeg" alt="Bastidores 7" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.19 (2).jpeg" alt="Bastidores 8" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.19 (3).jpeg" alt="Bastidores 9" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.19 (4).jpeg" alt="Bastidores 10" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.19.jpeg" alt="Bastidores 11" loading="lazy">
 
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.20 (1).jpeg" alt="Bastidores 12" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.20 (2).jpeg" alt="Bastidores 13" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.20.jpeg" alt="Bastidores 14" loading="lazy">
 
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.49 (1).jpeg" alt="Bastidores 15" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.49 (2).jpeg" alt="Bastidores 16" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.49 (3).jpeg" alt="Bastidores 17" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.49 (4).jpeg" alt="Bastidores 18" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.49.jpeg" alt="Bastidores 19" loading="lazy">
 
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.50 (1).jpeg" alt="Bastidores 20" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.50 (2).jpeg" alt="Bastidores 21" loading="lazy">
+
         <img src="imagens/WhatsApp Image 2026-10-09 at 16.20.50.jpeg" alt="Bastidores 22" loading="lazy">
 
     </div>
@@ -383,23 +616,29 @@
 </section>
 
 <!-- PROFESSORAS -->
+
     <section id="professoras">
 
         <h2>Professoras Idealizadoras</h2>
 
         <p style="text-align: center;">
+
             Fernanda Florentino e Andréa Reis
+
         </p>
 
         <p style="text-align: center;">
+
             Colégio Estadual José Luiz Gori
+
             - Mandaguari/PR
+
         </p>
 
     </section>
 
-
     <!-- RODAPÉ -->
+
     <footer>
 
         <p>Projeto Livro na Caixa - 2026</p>
@@ -408,5 +647,62 @@
 
     </footer>
 
+
+    <!-- VISUALIZADOR DAS FOTOGRAFIAS -->
+    <div id="visualizador" class="visualizador" role="dialog" aria-modal="true" aria-label="Fotografia ampliada">
+        <button class="fechar-foto" type="button" aria-label="Fechar fotografia">×</button>
+        <button class="foto-anterior" type="button" aria-label="Foto anterior">❮</button>
+        <img id="foto-ampliada" src="" alt="Fotografia ampliada">
+        <button class="foto-proxima" type="button" aria-label="Próxima fotografia">❯</button>
+    </div>
+    <script>
+        const visualizador = document.getElementById('visualizador');
+        const fotoAmpliada = document.getElementById('foto-ampliada');
+        const galerias = [...document.querySelectorAll('.galeria')];
+        let fotosAtuais = [];
+        let indiceAtual = 0;
+
+        function mostrarFoto(indice) {
+            indiceAtual = (indice + fotosAtuais.length) % fotosAtuais.length;
+            fotoAmpliada.src = fotosAtuais[indiceAtual].src;
+            fotoAmpliada.alt = fotosAtuais[indiceAtual].alt;
+        }
+        function fecharFoto() {
+            visualizador.classList.remove('aberto');
+            fotoAmpliada.removeAttribute('src');
+            document.body.style.overflow = '';
+        }
+        galerias.forEach(galeria => {
+            const fotos = [...galeria.querySelectorAll('img')];
+            fotos.forEach((foto, indice) => {
+                foto.tabIndex = 0;
+                foto.setAttribute('role', 'button');
+                foto.setAttribute('aria-label', 'Ampliar ' + foto.alt);
+                const abrir = () => {
+                    fotosAtuais = fotos;
+                    mostrarFoto(indice);
+                    visualizador.classList.add('aberto');
+                    document.body.style.overflow = 'hidden';
+                    visualizador.querySelector('.fechar-foto').focus();
+                };
+                foto.addEventListener('click', abrir);
+                foto.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); abrir(); }
+                });
+            });
+        });
+        document.querySelector('.fechar-foto').addEventListener('click', fecharFoto);
+        document.querySelector('.foto-anterior').addEventListener('click', () => mostrarFoto(indiceAtual - 1));
+        document.querySelector('.foto-proxima').addEventListener('click', () => mostrarFoto(indiceAtual + 1));
+        visualizador.addEventListener('click', e => { if (e.target === visualizador) fecharFoto(); });
+        document.addEventListener('keydown', e => {
+            if (!visualizador.classList.contains('aberto')) return;
+            if (e.key === 'Escape') fecharFoto();
+            if (e.key === 'ArrowLeft') mostrarFoto(indiceAtual - 1);
+            if (e.key === 'ArrowRight') mostrarFoto(indiceAtual + 1);
+        });
+    </script>
+
 </body>
+
 </html>
