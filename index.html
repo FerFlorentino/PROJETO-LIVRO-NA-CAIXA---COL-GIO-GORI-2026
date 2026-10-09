@@ -16,27 +16,35 @@
             padding: 0;
         }
 
-        
-<header>
-
-    <img src="imagem39.jpeg"
-         alt="Banner do Projeto Livro na Caixa"
-         class="banner-projeto">
-
-    <h1>📚 Projeto Livro na Caixa 📦</h1>
-
-    <p>Histórias que ganham vida!</p>
-
-    <p>Colégio Estadual José Luiz Gori</p>
-
-</header>
-
-
-
-        h1 {
-            font-size: 36px;
+        /* CABEÇALHO AZUL */
+        header {
+            background-color: #24558a;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
         }
 
+        /* BANNER DO PROJETO */
+        .banner-projeto {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 0 auto 20px;
+            border-radius: 12px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 15px 0;
+        }
+
+        header p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        /* MENU */
         nav {
             background-color: #f5ca55;
             text-align: center;
@@ -44,12 +52,14 @@
         }
 
         nav a {
-            margin: 10px;
+            display: inline-block;
+            margin: 5px 10px;
             color: #173b75;
             text-decoration: none;
             font-weight: bold;
         }
 
+        /* SEÇÕES */
         section {
             background-color: white;
             max-width: 1000px;
@@ -67,6 +77,7 @@
             line-height: 1.7;
         }
 
+        /* GALERIA */
         .galeria {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -80,6 +91,7 @@
             border-radius: 10px;
         }
 
+        /* RODAPÉ */
         footer {
             background-color: #24558a;
             color: white;
@@ -87,9 +99,14 @@
             padding: 20px;
         }
 
+        /* CELULARES */
         @media (max-width: 700px) {
             section {
                 margin: 15px;
+            }
+
+            header h1 {
+                font-size: 28px;
             }
 
             .galeria {
@@ -109,9 +126,17 @@
 
     <!-- CABEÇALHO -->
     <header>
+
+        <img src="imagem39.jpeg"
+             alt="Banner do Projeto Livro na Caixa"
+             class="banner-projeto">
+
         <h1>📚 Projeto Livro na Caixa 📦</h1>
+
         <p>Histórias que ganham vida!</p>
+
         <p>Colégio Estadual José Luiz Gori</p>
+
     </header>
 
     <!-- MENU -->
@@ -121,12 +146,13 @@
         <a href="#professoras">Professoras</a>
     </nav>
 
-    <!-- APRESENTAÇÃO DO PROJETO -->
+    <!-- SOBRE O PROJETO -->
     <section id="sobre">
+
         <h2>Sobre o Projeto</h2>
 
         <p>
-            O projeto Livro na Caixa foi desenvolvido
+            O projeto Livro na Caixa foi idealizado
             pelas professoras Fernanda Florentino e
             Andréa Reis, com os alunos dos 6º anos
             do Colégio Estadual José Luiz Gori,
@@ -147,10 +173,12 @@
             8 de outubro de 2026 e contou com
             a participação da comunidade escolar.
         </p>
+
     </section>
 
     <!-- GALERIA DE FOTOGRAFIAS -->
     <section id="fotos">
+
         <h2>📸 Galeria de Fotografias</h2>
 
         <p>
@@ -160,56 +188,52 @@
 
         <div class="galeria">
 
-            
-<div class="galeria">
-
-    <img src="imagens/foto1.jpg" alt="Foto 1">
-    <img src="imagens/foto2.jpg" alt="Foto 2">
-    <img src="imagens/foto3.jpg" alt="Foto 3">
-    <img src="imagens/foto4.jpg" alt="Foto 4">
-    <img src="imagens/foto5.jpg" alt="Foto 5">
-    <img src="imagens/foto6.jpg" alt="Foto 6">
-    <img src="imagens/foto7.jpg" alt="Foto 7">
-    <img src="imagens/foto8.jpg" alt="Foto 8">
-    <img src="imagens/foto9.jpg" alt="Foto 9">
-    <img src="imagens/foto10.jpg" alt="Foto 10">
-    <img src="imagens/foto11.jpg" alt="Foto 11">
-    <img src="imagens/foto12.jpg" alt="Foto 12">
-    <img src="imagens/foto13.jpg" alt="Foto 13">
-    <img src="imagens/foto14.jpg" alt="Foto 14">
-    <img src="imagens/foto15.jpg" alt="Foto 15">
-    <img src="imagens/foto16.jpg" alt="Foto 16">
-    <img src="imagens/foto17.jpg" alt="Foto 17">
-    <img src="imagens/foto18.jpg" alt="Foto 18">
-    <img src="imagens/foto19.jpg" alt="Foto 19">
-    <img src="imagens/foto20.jpg" alt="Foto 20">
-    <img src="imagens/foto21.jpg" alt="Foto 21">
-    <img src="imagens/foto22.jpg" alt="Foto 22">
-    <img src="imagens/foto23.jpg" alt="Foto 23">
-    <img src="imagens/foto24.jpg" alt="Foto 24">
-    <img src="imagens/foto25.jpg" alt="Foto 25">
-    <img src="imagens/foto26.jpg" alt="Foto 26">
-    <img src="imagens/foto27.jpg" alt="Foto 27">
-    <img src="imagens/foto28.jpg" alt="Foto 28">
-    <img src="imagens/foto29.jpg" alt="Foto 29">
-    <img src="imagens/foto30.jpg" alt="Foto 30">
-    <img src="imagens/foto31.jpg" alt="Foto 31">
-    <img src="imagens/foto32.jpg" alt="Foto 32">
-    <img src="imagens/foto33.jpg" alt="Foto 33">
-    <img src="imagens/foto34.jpg" alt="Foto 34">
-    <img src="imagens/foto35.jpg" alt="Foto 35">
-    <img src="imagens/foto36.jpg" alt="Foto 36">
-    <img src="imagens/foto37.jpg" alt="Foto 37">
-    <img src="imagens/foto38.jpg" alt="Foto 38">
-
-</div>
-
+            <img src="imagens/foto1.jpg" alt="Foto 1">
+            <img src="imagens/foto2.jpg" alt="Foto 2">
+            <img src="imagens/foto3.jpg" alt="Foto 3">
+            <img src="imagens/foto4.jpg" alt="Foto 4">
+            <img src="imagens/foto5.jpg" alt="Foto 5">
+            <img src="imagens/foto6.jpg" alt="Foto 6">
+            <img src="imagens/foto7.jpg" alt="Foto 7">
+            <img src="imagens/foto8.jpg" alt="Foto 8">
+            <img src="imagens/foto9.jpg" alt="Foto 9">
+            <img src="imagens/foto10.jpg" alt="Foto 10">
+            <img src="imagens/foto11.jpg" alt="Foto 11">
+            <img src="imagens/foto12.jpg" alt="Foto 12">
+            <img src="imagens/foto13.jpg" alt="Foto 13">
+            <img src="imagens/foto14.jpg" alt="Foto 14">
+            <img src="imagens/foto15.jpg" alt="Foto 15">
+            <img src="imagens/foto16.jpg" alt="Foto 16">
+            <img src="imagens/foto17.jpg" alt="Foto 17">
+            <img src="imagens/foto18.jpg" alt="Foto 18">
+            <img src="imagens/foto19.jpg" alt="Foto 19">
+            <img src="imagens/foto20.jpg" alt="Foto 20">
+            <img src="imagens/foto21.jpg" alt="Foto 21">
+            <img src="imagens/foto22.jpg" alt="Foto 22">
+            <img src="imagens/foto23.jpg" alt="Foto 23">
+            <img src="imagens/foto24.jpg" alt="Foto 24">
+            <img src="imagens/foto25.jpg" alt="Foto 25">
+            <img src="imagens/foto26.jpg" alt="Foto 26">
+            <img src="imagens/foto27.jpg" alt="Foto 27">
+            <img src="imagens/foto28.jpg" alt="Foto 28">
+            <img src="imagens/foto29.jpg" alt="Foto 29">
+            <img src="imagens/foto30.jpg" alt="Foto 30">
+            <img src="imagens/foto31.jpg" alt="Foto 31">
+            <img src="imagens/foto32.jpg" alt="Foto 32">
+            <img src="imagens/foto33.jpg" alt="Foto 33">
+            <img src="imagens/foto34.jpg" alt="Foto 34">
+            <img src="imagens/foto35.jpg" alt="Foto 35">
+            <img src="imagens/foto36.jpg" alt="Foto 36">
+            <img src="imagens/foto37.jpg" alt="Foto 37">
+            <img src="imagens/foto38.jpg" alt="Foto 38">
 
         </div>
+
     </section>
 
     <!-- PROFESSORAS -->
     <section id="professoras">
+
         <h2>Professoras Idealizadoras</h2>
 
         <p style="text-align: center;">
@@ -220,12 +244,16 @@
             Colégio Estadual José Luiz Gori
             - Mandaguari/PR
         </p>
+
     </section>
 
     <!-- RODAPÉ -->
     <footer>
+
         <p>Projeto Livro na Caixa - 2026</p>
+
         <p>📚 Ler, imaginar, criar e transformar!</p>
+
     </footer>
 
 </body>
